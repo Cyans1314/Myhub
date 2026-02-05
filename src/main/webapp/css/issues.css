@@ -1,0 +1,413 @@
+/* GitHub Issues page styles */
+
+/* Issues list page */
+.issues-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 24px 32px;
+}
+
+.issues-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.new-issue-btn {
+    background-color: #1f883d;
+    color: #ffffff;
+    border: 1px solid rgba(31, 136, 61, 0.4);
+    border-radius: 6px;
+    padding: 5px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.new-issue-btn:hover {
+    background-color: #1a7f37;
+}
+
+.issues-tabs {
+    display: flex;
+    border-bottom: 1px solid #d0d7de;
+    margin-bottom: 16px;
+}
+
+.issues-tab {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #656d76;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    transition: color 0.1s ease-in-out;
+}
+
+.issues-tab.active {
+    color: #1f2328;
+    border-bottom-color: #fd8c73;
+}
+
+.issues-tab:hover {
+    color: #1f2328;
+}
+
+.issue-list {
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    background: #ffffff;
+}
+
+.issue-item {
+    display: flex;
+    padding: 16px;
+    border-bottom: 1px solid #d0d7de;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.issue-item:last-child {
+    border-bottom: none;
+}
+
+.issue-item:hover {
+    background-color: #f6f8fa;
+}
+
+.issue-icon {
+    width: 32px;
+    flex-shrink: 0;
+    padding-top: 2px;
+}
+
+.issue-icon i {
+    font-size: 16px;
+}
+
+.issue-icon.open {
+    color: #1a7f37;
+}
+
+.issue-icon.closed {
+    color: #8250df;
+}
+
+.issue-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.issue-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1f2328;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+.issue-title:hover {
+    color: #0969da;
+}
+
+.issue-meta {
+    font-size: 12px;
+    color: #656d76;
+}
+
+.issue-number {
+    font-weight: 600;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 64px 32px;
+}
+
+.empty-state h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1f2328;
+    margin-bottom: 8px;
+}
+
+.empty-state p {
+    font-size: 14px;
+    color: #656d76;
+}
+
+/* Issue detail page */
+.issue-detail-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 24px 32px;
+}
+
+.issue-header {
+    margin-bottom: 24px;
+}
+
+.issue-title-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.issue-title-text {
+    font-size: 32px;
+    font-weight: 600;
+    color: #1f2328;
+    margin: 0;
+    flex: 1;
+}
+
+.issue-number-badge {
+    font-size: 32px;
+    font-weight: 300;
+    color: #656d76;
+}
+
+.issue-status-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 5px 12px;
+    border-radius: 24px;
+    font-weight: 500;
+}
+
+.status-badge.open {
+    background-color: #1a7f37;
+    color: #ffffff;
+}
+
+.status-badge.closed {
+    background-color: #8250df;
+    color: #ffffff;
+}
+
+.issue-meta-text {
+    color: #656d76;
+}
+
+.comment-thread {
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    margin-bottom: 16px;
+}
+
+.comment-box {
+    border-bottom: 1px solid #d0d7de;
+}
+
+.comment-box:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    background-color: #f6f8fa;
+    padding: 12px 16px;
+    border-bottom: 1px solid #d0d7de;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.comment-author {
+    font-weight: 600;
+    color: #1f2328;
+}
+
+.comment-badge {
+    background-color: #ddf4ff;
+    color: #0969da;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.comment-time {
+    color: #656d76;
+    font-size: 12px;
+}
+
+.comment-body {
+    padding: 16px;
+    color: #1f2328;
+    line-height: 1.6;
+    white-space: pre-wrap;
+}
+
+.new-comment-form {
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    margin-top: 24px;
+}
+
+.comment-form-header {
+    background-color: #f6f8fa;
+    padding: 8px 16px;
+    border-bottom: 1px solid #d0d7de;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.comment-form-body {
+    padding: 16px;
+}
+
+.comment-textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 8px 12px;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif;
+    resize: vertical;
+}
+
+.comment-textarea:focus {
+    outline: none;
+    border-color: #0969da;
+    box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.3);
+}
+
+.comment-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.btn {
+    padding: 5px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.btn-primary {
+    background-color: #1f883d;
+    color: #ffffff;
+    border-color: rgba(31, 136, 61, 0.4);
+}
+
+.btn-primary:hover {
+    background-color: #1a7f37;
+}
+
+.btn-danger {
+    background-color: #cf222e;
+    color: #ffffff;
+    border-color: rgba(207, 34, 46, 0.4);
+}
+
+.btn-danger:hover {
+    background-color: #a40e26;
+}
+
+.btn-secondary {
+    background-color: #f6f8fa;
+    color: #24292f;
+    border-color: #d0d7de;
+}
+
+.btn-secondary:hover {
+    background-color: #f3f4f6;
+}
+
+/* New Issue page */
+.new-issue-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 24px 32px;
+}
+
+.new-issue-header {
+    margin-bottom: 24px;
+}
+
+.new-issue-form {
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    background: #ffffff;
+}
+
+.form-group {
+    padding: 16px;
+    border-bottom: 1px solid #d0d7de;
+}
+
+.form-group:last-child {
+    border-bottom: none;
+}
+
+.form-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1f2328;
+    margin-bottom: 8px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #0969da;
+    box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.3);
+}
+
+.form-textarea {
+    width: 100%;
+    min-height: 200px;
+    padding: 8px 12px;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif;
+    resize: vertical;
+}
+
+.form-textarea:focus {
+    outline: none;
+    border-color: #0969da;
+    box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.3);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    padding: 16px;
+    background-color: #f6f8fa;
+    border-top: 1px solid #d0d7de;
+}

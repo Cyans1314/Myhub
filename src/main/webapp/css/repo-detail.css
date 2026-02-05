@@ -1,0 +1,577 @@
+/* GitHub Repository detail page styles - pixel-level restoration */
+
+/* Global styles */
+body {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1f2328;
+    background-color: #ffffff;
+    margin: 0;
+}
+
+/* Container */
+.repo-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+/* Project title bar */
+.repo-title-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid #d1d9e0;
+    margin-bottom: 16px;
+}
+
+.repo-title-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.repo-avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 3px;
+}
+
+.repo-name {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1f2328;
+    margin: 0;
+}
+
+.visibility-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #656d76;
+    border: 1px solid #d1d9e0;
+    border-radius: 2em;
+    padding: 0 7px;
+    line-height: 18px;
+}
+
+.repo-title-right {
+    display: flex;
+    gap: 8px;
+}
+
+.repo-action-btn {
+    background-color: #f6f8fa;
+    border: 1px solid #d1d9e0;
+    border-radius: 6px;
+    padding: 3px 12px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #1f2328;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+}
+
+.repo-action-btn:hover {
+    background-color: #f3f4f6;
+}
+
+.repo-action-btn.starred {
+    background-color: #fff8c5;
+    border-color: #d4a72c;
+}
+
+/* Branch operation bar */
+.branch-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.branch-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.branch-btn {
+    background-color: #f6f8fa;
+    border: 1px solid #d1d9e0;
+    border-radius: 6px;
+    padding: 5px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1f2328;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.branch-btn:hover {
+    background-color: #f3f4f6;
+}
+
+.branch-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 14px;
+    color: #656d76;
+}
+
+.code-btn {
+    background-color: #1f883d;
+    border: 1px solid rgba(31, 35, 40, 0.15);
+    border-radius: 6px;
+    padding: 5px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.code-btn:hover {
+    background-color: #1a7f37;
+}
+
+/* Main content area */
+.repo-content {
+    display: flex;
+    gap: 24px;
+}
+
+.repo-main {
+    flex: 1;
+    min-width: 0;
+}
+
+.repo-sidebar {
+    width: 296px;
+    flex-shrink: 0;
+}
+
+/* File list */
+.file-list-container {
+    border: 1px solid #d1d9e0;
+    border-radius: 6px;
+    margin-bottom: 24px;
+    overflow: hidden;
+}
+
+.file-list-header {
+    background-color: #f6f8fa;
+    padding: 16px;
+    border-bottom: 1px solid #d1d9e0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.commit-info {
+    display: flex;
+    align-items: center;
+}
+
+.commit-avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.commit-author {
+    font-weight: 600;
+    color: #1f2328;
+    margin-right: 4px;
+}
+
+.commit-message {
+    color: #656d76;
+}
+
+.commit-meta {
+    color: #656d76;
+    font-size: 12px;
+}
+
+.commit-hash {
+    font-family: ui-monospace,SFMono-Regular,"SF Mono",Consolas,"Liberation Mono",Menlo,monospace;
+    margin-right: 8px;
+}
+
+.files-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+.file-row {
+    border-top: 1px solid #d1d9e0;
+}
+
+.file-row:first-child {
+    border-top: none;
+}
+
+.file-row:hover {
+    background-color: #f6f8fa;
+}
+
+.file-row td {
+    padding: 8px 16px;
+    vertical-align: middle;
+}
+
+.file-icon {
+    width: 16px;
+    text-align: center;
+}
+
+.file-name {
+    color: #0969da;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.file-name:hover {
+    text-decoration: underline;
+}
+
+.file-message {
+    color: #656d76;
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.file-age {
+    color: #656d76;
+    font-size: 12px;
+    text-align: right;
+    white-space: nowrap;
+}
+
+/* README area */
+.readme-container {
+    border: 1px solid #d1d9e0;
+    border-radius: 6px;
+    background-color: #ffffff;
+}
+
+.readme-header {
+    background-color: #f6f8fa;
+    border-bottom: 1px solid #d1d9e0;
+    border-radius: 6px 6px 0 0;
+    padding: 8px 16px;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.readme-body {
+    padding: 32px;
+}
+
+/* Markdown styles */
+.markdown-body {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #1f2328;
+}
+
+.markdown-body h1 {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0 0 16px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d1d9e0;
+}
+
+.markdown-body h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 24px 0 16px 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #d1d9e0;
+}
+
+.markdown-body p {
+    margin: 0 0 16px 0;
+}
+
+.markdown-body ul {
+    margin: 0 0 16px 0;
+    padding-left: 32px;
+}
+
+.markdown-body li {
+    margin: 4px 0;
+}
+
+/* Sidebar */
+.sidebar-section {
+    border: 1px solid #d1d9e0;
+    border-radius: 6px;
+    padding: 16px;
+    background-color: #ffffff;
+    margin-bottom: 16px;
+}
+
+.sidebar-heading {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1f2328;
+    margin: 0 0 12px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    color: #1f2328;
+    font-size: 14px;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.sidebar-item i {
+    width: 16px;
+    margin-right: 8px;
+    color: #656d76;
+    text-align: center;
+}
+
+.topic-tag {
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #0969da;
+    background-color: #ddf4ff;
+    border-radius: 2em;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    text-decoration: none;
+    line-height: 22px;
+}
+
+.topic-tag:hover {
+    background-color: #b6e3ff;
+}
+
+/* Language progress bar */
+.language-bar {
+    display: flex;
+    height: 8px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.language-stats {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.language-item {
+    margin-right: 16px;
+}
+
+.language-dot {
+    font-size: 16px;
+    margin-right: 4px;
+}
+
+/* Workflow card */
+.workflow-card {
+    background-color: #ffffff;
+    border: 1px solid #d1d9e0;
+    border-radius: 6px;
+    padding: 16px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.workflow-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.workflow-icon {
+    width: 32px;
+    height: 32px;
+    background-color: #f6f8fa;
+    border: 1px solid #d1d9e0;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.workflow-details h4 {
+    margin: 0 0 4px 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1f2328;
+}
+
+.workflow-details p {
+    margin: 0;
+    font-size: 12px;
+    color: #656d76;
+}
+
+.workflow-btn {
+    background-color: #f6f8fa;
+    border: 1px solid #d1d9e0;
+    border-radius: 6px;
+    padding: 5px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #1f2328;
+    cursor: pointer;
+}
+
+.workflow-btn:hover {
+    background-color: #f3f4f6;
+}
+/* Code button dropdown menu */
+.code-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.code-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #ffffff;
+    border: 1px solid #d0d7de;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(140, 149, 159, 0.2);
+    min-width: 320px;
+    z-index: 1000;
+    display: none;
+    margin-top: 8px;
+}
+
+.code-dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-section {
+    padding: 16px;
+}
+
+.dropdown-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #1f2328;
+    margin-bottom: 12px;
+}
+
+.clone-tabs {
+    border-bottom: 1px solid #d0d7de;
+    margin-bottom: 12px;
+}
+
+.clone-tab {
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #1f2328;
+    border-bottom: 2px solid #fd8c73;
+    font-weight: 600;
+}
+
+.clone-url-container {
+    display: flex;
+    align-items: center;
+    background: #f6f8fa;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+}
+
+.clone-url {
+    flex: 1;
+    background: none;
+    border: none;
+    font-family: ui-monospace,SFMono-Regular,"SF Mono",Consolas,"Liberation Mono",Menlo,monospace;
+    font-size: 14px;
+    color: #1f2328;
+    outline: none;
+}
+
+.copy-btn {
+    background: none;
+    border: none;
+    color: #656d76;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.copy-btn:hover {
+    background: #f3f4f6;
+    color: #1f2328;
+}
+
+.clone-description {
+    font-size: 12px;
+    color: #656d76;
+    margin: 0;
+}
+
+.dropdown-divider {
+    height: 1px;
+    background: #d0d7de;
+    margin: 0 16px;
+}
+
+.download-zip-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #1f2328;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+}
+
+.download-zip-btn:hover {
+    color: #0969da;
+}
+
+.download-zip-btn i {
+    color: #656d76;
+}
