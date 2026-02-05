@@ -154,7 +154,7 @@ MyHub/
 在开始之前，请确保你的系统已安装以下环境：
 
 - Java 17 或更高版本
-- Maven 3.6 或更高版本
+- Maven 3.6 或更高版本（必须安装全局Maven）
 - MySQL 5.7 或更高版本
 - Tomcat 9 或更高版本（或其他Servlet容器）
 - Git
@@ -167,6 +167,12 @@ MyHub/
 
 ```bash
 mvn clean install
+```
+
+**注意：** 确保你已安装全局Maven并且`mvn`命令在系统PATH中可用。你可以通过以下命令验证：
+
+```bash
+mvn -version
 ```
 
 这个命令会根据pom.xml文件下载所有必需的依赖库，包括JGit、MySQL驱动、Log4j2等。
