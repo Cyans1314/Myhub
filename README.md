@@ -11,7 +11,7 @@ MyHub 是一个功能完整的代码托管系统，提供用户管理、仓库�
 | 后端 | Java 8+, Servlet, JSP, Maven |
 | 前端 | HTML5, CSS3, JavaScript, Primer CSS, Font Awesome, Highlight.js |
 | 数据库 | MySQL 5.7+ |
-| 其他 | JGit, Log4j2, Apache Commons, Deepseek API |
+| 其他 | JGit, Log4j2,Tomcat, Commons, Deepseek API |
 
 ## 项目结构
 
